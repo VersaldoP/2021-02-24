@@ -56,8 +56,8 @@ public class FXMLController {
     	}
     	this.model.creaGrafo(m);
     	txtResult.appendText("GRAFO CREATO");
-    	txtResult.appendText("# VERTICI"+ model.nVertici()+"\n");
-    	txtResult.appendText("# ARCHI"+ model.nArchi()+"\n");
+    	txtResult.appendText("# VERTICI "+ model.nVertici()+"\n");
+    	txtResult.appendText("# ARCHI "+ model.nArchi()+"\n");
     	
     }
 

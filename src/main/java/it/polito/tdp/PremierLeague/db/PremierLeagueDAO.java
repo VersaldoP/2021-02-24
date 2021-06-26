@@ -18,7 +18,7 @@ import it.polito.tdp.PremierLeague.model.Team;
 public class PremierLeagueDAO {
 	
 	public void listAllPlayersMatch(Map<Integer,Player> idMap,Match m){
-		String sql = "SELECT p.PlayerID p.Name "
+		String sql = "SELECT p.PlayerID, p.Name "
 				+ "FROM players p,actions a "
 				+ "WHERE p.PlayerID=a.PlayerID "
 				+ "AND a.MatchID=?";
@@ -72,8 +72,7 @@ public class PremierLeagueDAO {
 				+ "FROM actions a ,actions a2 "
 				+ "where a.MatchID=? AND a2.MatchID=a.MatchID "
 				+ "AND a.PlayerID> a2.PlayerID "
-				+ "AND a.TeamID<> a2.TeamID "
-				+ "HAVING peso <> 0";
+				+ "AND a.TeamID<> a2.TeamID ";
 		List<Adiacenze> result = new ArrayList<Adiacenze>();
 		Connection conn = DBConnect.getConnection();
 
