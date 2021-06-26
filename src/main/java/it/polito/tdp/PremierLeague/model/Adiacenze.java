@@ -1,6 +1,7 @@
 package it.polito.tdp.PremierLeague.model;
 
 public class Adiacenze {
+	
 	private Player p1;
 	private Player p2;
 	private double peso;
